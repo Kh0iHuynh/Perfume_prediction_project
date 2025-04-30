@@ -1,0 +1,10 @@
+
+pyinstaller -w --onefile --add-data "perfume_cnn_model.keras:." --add-data "tokenizer.pkl:." --add-data "winning_note_proportions.tsv:." perfume_gui_app.py
+
+Window:
+
+python -m PyInstaller --onefile ^
+--add-data="perfume_cnn_model.keras;." ^
+--add-data="tokenizer.pkl;." ^
+--add-data="winning_note_proportions.tsv;." ^
+fragrance_predictor.py
