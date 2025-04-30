@@ -1,0 +1,41 @@
+#----------
+# The directory named perfume_predictor in window should have keras model and tokenizer or any embedding code,etc file for the model
+#----------
+
+perfume_predictor/
+-load_and_predict_gui.py
+-perfume_cnn_model.keras
+-tokenizer.pkl
+
+
+#-------
+# in window. open cmd. install python 3.9. then do the following
+#------
+python -m venv venv
+venv\Scripts\activate
+pip install --upgrade pip
+
+#--------
+# install all requirement for the prediction script:
+#---------
+pip install tensorflow tk
+
+#-------
+# Run this to make sure it launches:
+#-------
+python load_and_predict_gui.py
+
+
+#------
+# install pyinstaller
+#-------
+pip install pyinstaller
+
+
+#-------
+# package to exe file
+#-------
+pyinstaller --onefile --add-data "perfume_cnn_model.keras;." --add-data "tokenizer.pkl;." load_and_predict_gui.py
+
+
+a new directory named dist will be create with exe file. Make sure to copy perfume_cnn_model.keras and tokenizer.pkl to new dist directory. This will be the folder distributed to user.
