@@ -29,3 +29,4 @@ App package into standalone version
 -----
 load_and_predict_gui.py is a script used to package everything into a standalone window exe file.
 full steps to generate exe can be read in window_app_make_guide.txt
+App can make prediction if provided with combination of Top,Heart,Base notes using notes presented in winning_note_proportions.tsv
